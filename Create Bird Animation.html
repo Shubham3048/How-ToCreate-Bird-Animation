@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Create Bird Animation Using Html&Css</title>
+    <style>
+        .bird{
+            width: 142px;
+            height: 205px;
+            background-color: red;
+           background-image: url("img/Flying.png");
+           background-repeat: no-repeat;
+           background-size: cover;
+           animation-name: bird;
+           animation-duration: 1s;
+           animation-iteration-count: infinite;
+           animation-timing-function: steps(9);
+        }
+        @keyframes bird{
+            0%{
+                background-position: 0px 0px;
+            }
+            100%{
+                background-position: -1257px 0px;
+            }
+        }
+        .birdcontaner{
+            position: relative;
+            animation-name: contaner;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes contaner{
+            from{
+                    left: 0%;
+            }
+            to{
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="birdcontaner">
+    <div class="bird"></div>
+    </div>
+</body>
+</html>
